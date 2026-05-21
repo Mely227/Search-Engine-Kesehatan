@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hasil Pencarian</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family:'Poppins',sans-serif;
+            background:#020617;
+            color:white;
+            min-height:100vh;
+        }
+
+        /* NAVBAR */
+
+        .navbar{
+            width:100%;
+            padding:20px 60px;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            background:#0f172a;
+            border-bottom:1px solid rgba(255,255,255,0.08);
+            position:sticky;
+            top:0;
+            z-index:100;
+            backdrop-filter:blur(10px);
+        }
+
+        .logo{
+            font-size:28px;
+            font-weight:700;
+            color:#60a5fa;
+        }
+
+        .btn-back{
+            text-decoration:none;
+            color:white;
+            background:#1e293b;
+            padding:12px 22px;
+            border-radius:12px;
+            transition:0.3s;
+            font-weight:500;
+        }
+
+        .btn-back:hover{
+            background:#2563eb;
+            transform:translateY(-2px);
+        }
+
+        /* CONTAINER */
+
+        .container{
+            max-width:1200px;
+            margin:auto;
+            padding:50px 25px;
+        }
+
+        /* SEARCH INFO */
+
+        .search-info{
+            margin-bottom:40px;
+        }
+
+        .search-info h1{
+            font-size:40px;
+            margin-bottom:10px;
+        }
+
+        .search-info span{
+            color:#60a5fa;
+        }
+
+        .search-info p{
+            color:#94a3b8;
+            font-size:16px;
+        }
+
+        /* CARD */
+
+        .card{
+            background:#0f172a;
+            border:1px solid rgba(255,255,255,0.08);
+            border-radius:25px;
+            padding:30px;
+            margin-bottom:30px;
+            transition:0.3s;
+            position:relative;
+            overflow:hidden;
+        }
+
+        .card:hover{
+            transform:translateY(-5px);
+            border-color:#2563eb;
+            box-shadow:0 10px 30px rgba(37,99,235,0.35);
+        }
+
+        .badge{
+            display:inline-block;
+            background:linear-gradient(135deg,#2563eb,#1d4ed8);
+            padding:8px 16px;
+            border-radius:50px;
+            font-size:13px;
+            font-weight:600;
+            margin-bottom:18px;
+        }
+
+        .card h2{
+            margin-bottom:15px;
+            line-height:1.4;
+        }
+
+        .card h2 a{
+            color:#60a5fa;
+            text-decoration:none;
+            transition:0.3s;
+        }
+
+        .card h2 a:hover{
+            color:white;
+        }
+
+        .card p{
+            color:#cbd5e1;
+            line-height:1.9;
+            margin-bottom:25px;
+        }
+
+        .actions{
+            display:flex;
+            gap:15px;
+            flex-wrap:wrap;
+        }
+
+        .read-btn{
+            text-decoration:none;
+            background:linear-gradient(135deg,#2563eb,#1d4ed8);
+            color:white;
+            padding:14px 24px;
+            border-radius:12px;
+            font-weight:600;
+            transition:0.3s;
+        }
+
+        .read-btn:hover{
+            transform:translateY(-2px);
+            box-shadow:0 10px 20px rgba(37,99,235,0.4);
+        }
+
+        .score-btn{
+            background:#1e293b;
+            color:#cbd5e1;
+            padding:14px 24px;
+            border-radius:12px;
+        }
+
+        /* NO RESULT */
+
+        .no-result{
+            text-align:center;
+            padding:80px 20px;
+            background:#0f172a;
+            border-radius:25px;
+            border:1px solid rgba(255,255,255,0.08);
+        }
+
+        .no-result h2{
+            color:#60a5fa;
+            margin-bottom:10px;
+        }
+
+        .no-result p{
+            color:#94a3b8;
+        }
+
+        /* FOOTER */
+
+        footer{
+            text-align:center;
+            padding:30px;
+            color:#64748b;
+            border-top:1px solid rgba(255,255,255,0.08);
+            margin-top:50px;
+        }
+
+        /* RESPONSIVE */
+
+        @media(max-width:768px){
+
+            .navbar{
+                padding:20px;
+            }
+
+            .search-info h1{
+                font-size:28px;
+            }
+
+            .card{
+                padding:25px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <div class="navbar">
+
+        <div class="logo">
+            📰 News Search
+        </div>
+
+        <a href="/" class="btn-back">
+            ← Kembali
+        </a>
+
+    </div>
+
+    <!-- CONTENT -->
+
+    <div class="container">
+
+        <div class="search-info">
+
+            <h1>
+                Hasil pencarian:
+                <span>{{ query }}</span>
+            </h1>
+
+            <p>
+                Ditemukan {{ results|length }} berita relevan
+            </p>
+
+        </div>
+
+        {% if results %}
+
+            {% for item in results %}
+
+            <div class="card">
+
+                <div class="badge">
+                    BM25 Score : {{ item.skor }}
+                </div>
+
+                <h2>
+                    <a href="{{ item.link }}" target="_blank">
+                        {{ item.judul }}
+                    </a>
+                </h2>
+
+                <p>
+                    {{ item.konten }}
+                </p>
+
+                <div class="actions">
+
+                    <a href="{{ item.link }}" target="_blank" class="read-btn">
+                        📰 Baca Berita Asli
+                    </a>
+
+                <a href="/detail/{{ item.id }}?query={{ query }}" class="score-btn">
+                    📊 BM25 Score : {{ item.skor }}
+                </a>
+
+                </div>
+
+            </div>
+
+            {% endfor %}
+
+        {% else %}
+
+            <div class="no-result">
+
+                <h2>
+                    Berita Tidak Ditemukan
+                </h2>
+
+                <p>
+                    Coba gunakan kata kunci lain seperti politik, teknologi, ekonomi, AI, dan lainnya.
+                </p>
+
+            </div>
+
+        {% endif %}
+
+    </div>
+
+    <footer>
+        © 2026 News Search Engine BM25 | Powered by Flask & BM25
+    </footer>
+
+</body>
+</html>

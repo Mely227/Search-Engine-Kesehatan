@@ -1,0 +1,604 @@
+[
+  {
+    "id": 1,
+    "judul": "Perkembangan Data Mining di Indonesia",
+    "konten": "Data mining dan teknologi digital menjadi solusi penting untuk mengolah informasi berita di era modern.",
+    "link": "https://www.kompas.com"
+  },
+  {
+    "id": 2,
+    "judul": "Hubungan Internasional Indonesia Semakin Menguat",
+    "konten": "Kerja sama bilateral dengan berbagai negara terus meningkat dalam bidang ekonomi teknologi dan pendidikan.",
+    "link": "https://www.cnnindonesia.com"
+  },
+  {
+    "id": 3,
+    "judul": "Perkembangan Politik Indonesia 2026",
+    "konten": "Pemerintah dan parlemen membahas kebijakan politik ekonomi pendidikan dan teknologi nasional.",
+    "link": "https://www.kompas.com"
+  },
+  {
+    "id": 4,
+    "judul": "Harga BBM Mengalami Penyesuaian",
+    "konten": "Penyesuaian harga BBM memengaruhi kondisi ekonomi nasional dan aktivitas masyarakat.",
+    "link": "https://www.cnnindonesia.com"
+  },
+  {
+    "id": 5,
+    "judul": "Teknologi AI Semakin Berkembang",
+    "konten": "Artificial intelligence dan teknologi modern mulai digunakan di berbagai sektor industri pendidikan dan bisnis.",
+    "link": "https://tekno.kompas.com"
+  },
+  {
+    "id": 6,
+    "judul": "Timnas Indonesia Raih Kemenangan",
+    "konten": "Timnas Indonesia berhasil menang dalam pertandingan olahraga internasional terbaru.",
+    "link": "https://sport.detik.com"
+  },
+  {
+    "id": 7,
+    "judul": "Ekonomi Digital Indonesia Meningkat",
+    "konten": "Pertumbuhan ekonomi digital dan teknologi bisnis diprediksi terus meningkat tahun ini.",
+    "link": "https://bisnis.tempo.co"
+  },
+  {
+    "id": 8,
+    "judul": "Cuaca Ekstrem Melanda Beberapa Daerah",
+    "konten": "BMKG mengimbau masyarakat tetap waspada terhadap cuaca ekstrem dan perubahan iklim.",
+    "link": "https://www.bmkg.go.id"
+  },
+  {
+    "id": 9,
+    "judul": "Kemajuan Dunia Pendidikan Indonesia",
+    "konten": "Pemerintah menerapkan teknologi digital dalam sistem pendidikan nasional di sekolah.",
+    "link": "https://edukasi.kompas.com"
+  },
+  {
+    "id": 10,
+    "judul": "Pembangunan Infrastruktur Terus Berlanjut",
+    "konten": "Berbagai proyek pembangunan infrastruktur jalan transportasi dan teknologi terus dipercepat.",
+    "link": "https://www.detik.com"
+  },
+  {
+    "id": 11,
+    "judul": "Investasi Asing di Indonesia Meningkat",
+    "konten": "Investor asing tertarik pada sektor ekonomi digital teknologi dan startup Indonesia.",
+    "link": "https://www.cnbcindonesia.com"
+  },
+  {
+    "id": 12,
+    "judul": "Inovasi Startup Lokal Semakin Berkembang",
+    "konten": "Startup Indonesia berhasil menciptakan inovasi teknologi digital dalam dunia bisnis.",
+    "link": "https://tekno.tempo.co"
+  },
+  {
+    "id": 13,
+    "judul": "Kesehatan Masyarakat Menjadi Prioritas",
+    "konten": "Program kesehatan nasional diperluas dengan bantuan teknologi kesehatan digital.",
+    "link": "https://health.detik.com"
+  },
+  {
+    "id": 14,
+    "judul": "Perkembangan Industri Game Indonesia",
+    "konten": "Industri game dan teknologi hiburan digital Indonesia berkembang pesat.",
+    "link": "https://inet.detik.com"
+  },
+  {
+    "id": 15,
+    "judul": "Transportasi Umum Berbasis Teknologi",
+    "konten": "Aplikasi transportasi online meningkatkan keamanan pengguna dengan teknologi modern.",
+    "link": "https://otomotif.kompas.com"
+  },
+  {
+    "id": 16,
+    "judul": "Pariwisata Indonesia Mulai Pulih",
+    "konten": "Sektor pariwisata dan ekonomi kreatif Indonesia kembali meningkat.",
+    "link": "https://travel.kompas.com"
+  },
+  {
+    "id": 17,
+    "judul": "Keamanan Siber Menjadi Fokus Utama",
+    "konten": "Perusahaan meningkatkan keamanan data dan teknologi siber untuk mencegah serangan digital.",
+    "link": "https://tekno.tempo.co"
+  },
+  {
+    "id": 18,
+    "judul": "Penerapan Smart City di Indonesia",
+    "konten": "Kota besar menerapkan teknologi smart city untuk layanan publik modern.",
+    "link": "https://www.liputan6.com"
+  },
+  {
+    "id": 19,
+    "judul": "Perkembangan Mobil Listrik Nasional",
+    "konten": "Mobil listrik dan teknologi kendaraan ramah lingkungan semakin populer.",
+    "link": "https://otomotif.kompas.com"
+  },
+  {
+    "id": 20,
+    "judul": "Harga Pangan Nasional Stabil",
+    "konten": "Pemerintah menjaga stabilitas ekonomi dan distribusi bahan pokok nasional.",
+    "link": "https://finance.detik.com"
+  },
+  {
+    "id": 21,
+    "judul": "Media Sosial Mempengaruhi Generasi Muda",
+    "konten": "Penggunaan media sosial dan teknologi komunikasi meningkat di kalangan remaja.",
+    "link": "https://www.tempo.co"
+  },
+  {
+    "id": 22,
+    "judul": "Perkembangan Teknologi Cloud Computing",
+    "konten": "Cloud computing mempermudah penyimpanan data dan sistem digital perusahaan.",
+    "link": "https://www.techinasia.com"
+  },
+  {
+    "id": 23,
+    "judul": "Perkembangan Teknologi Blockchain di Indonesia",
+    "konten": "Blockchain digunakan dalam sistem transaksi digital keamanan data dan ekonomi modern.",
+    "link": "https://tekno.kompas.com"
+  },
+  {
+    "id": 24,
+    "judul": "Pertumbuhan E-Commerce Semakin Pesat",
+    "konten": "Ekonomi digital dan transaksi belanja online meningkat signifikan.",
+    "link": "https://bisnis.tempo.co"
+  },
+  {
+    "id": 25,
+    "judul": "Indonesia Fokus Pada Energi Terbarukan",
+    "konten": "Pemerintah mengembangkan energi ramah lingkungan dan teknologi hijau nasional.",
+    "link": "https://www.cnnindonesia.com"
+  },
+  {
+    "id": 26,
+    "judul": "Kemajuan Artificial Intelligence di Dunia Pendidikan",
+    "konten": "Artificial intelligence membantu pendidikan digital dan pembelajaran modern.",
+    "link": "https://edukasi.kompas.com"
+  },
+  {
+    "id": 27,
+    "judul": "Peningkatan Keamanan Data Pengguna Internet",
+    "konten": "Perusahaan teknologi meningkatkan perlindungan data pengguna internet.",
+    "link": "https://tekno.tempo.co"
+  },
+  {
+    "id": 28,
+    "judul": "Perkembangan Startup Teknologi Finansial",
+    "konten": "Startup fintech berkembang pesat dalam sektor ekonomi digital Indonesia.",
+    "link": "https://www.cnbcindonesia.com"
+  },
+  {
+    "id": 29,
+    "judul": "Kemajuan Teknologi 5G di Indonesia",
+    "konten": "Jaringan 5G mempercepat perkembangan teknologi komunikasi digital nasional.",
+    "link": "https://inet.detik.com"
+  },
+  {
+    "id": 30,
+    "judul": "Ekspor Produk Lokal Mengalami Peningkatan",
+    "konten": "Produk lokal Indonesia semakin diminati pasar internasional dan ekonomi global.",
+    "link": "https://finance.detik.com"
+  }
+  ,
+{
+  "id": 31,
+  "judul": "Penggunaan Kendaraan Listrik Semakin Populer",
+  "konten": "Kendaraan listrik dan teknologi ramah lingkungan semakin diminati masyarakat perkotaan.",
+  "link": "https://otomotif.kompas.com"
+},
+{
+  "id": 32,
+  "judul": "Dunia Pendidikan Mengadopsi Teknologi Digital",
+  "konten": "Sekolah dan universitas mulai memanfaatkan teknologi digital dalam pembelajaran.",
+  "link": "https://edukasi.kompas.com"
+},
+{
+  "id": 33,
+  "judul": "Perkembangan Industri Film Indonesia",
+  "konten": "Industri film nasional berkembang dengan dukungan teknologi digital modern.",
+  "link": "https://www.tempo.co"
+},
+{
+  "id": 34,
+  "judul": "Peningkatan Wisata Domestik Nasional",
+  "konten": "Pariwisata lokal meningkat dan mendukung pertumbuhan ekonomi daerah.",
+  "link": "https://travel.kompas.com"
+},
+{
+  "id": 35,
+  "judul": "Teknologi Robotik Digunakan di Industri",
+  "konten": "Robotik dan otomatisasi membantu meningkatkan efisiensi industri modern.",
+  "link": "https://tekno.kompas.com"
+},
+{
+  "id": 36,
+  "judul": "Perkembangan Bisnis Kuliner Online",
+  "konten": "Layanan pesan antar makanan berkembang melalui teknologi digital.",
+  "link": "https://bisnis.tempo.co"
+},
+{
+  "id": 37,
+  "judul": "Olahraga Elektronik Semakin Populer",
+  "konten": "Esports menjadi hiburan digital favorit generasi muda Indonesia.",
+  "link": "https://sport.detik.com"
+},
+{
+  "id": 38,
+  "judul": "Peningkatan Investasi di Bidang Teknologi",
+  "konten": "Investor asing fokus pada perusahaan startup dan teknologi digital.",
+  "link": "https://www.cnbcindonesia.com"
+},
+{
+  "id": 39,
+  "judul": "Perkembangan Sistem Pembayaran Digital",
+  "konten": "Dompet digital membantu aktivitas ekonomi masyarakat modern.",
+  "link": "https://finance.detik.com"
+},
+{
+  "id": 40,
+  "judul": "Kemajuan Infrastruktur Internet Nasional",
+  "konten": "Akses internet cepat membantu perkembangan teknologi digital nasional.",
+  "link": "https://inet.detik.com"
+},
+{
+  "id": 41,
+  "judul": "Program Penghijauan Kota Besar",
+  "konten": "Pemerintah daerah meningkatkan ruang hijau untuk lingkungan sehat.",
+  "link": "https://www.liputan6.com"
+},
+{
+  "id": 42,
+  "judul": "Perkembangan Dunia Kesehatan Digital",
+  "konten": "Layanan kesehatan online berkembang dengan bantuan teknologi digital.",
+  "link": "https://health.detik.com"
+},
+{
+  "id": 43,
+  "judul": "Pengembangan Smart Farming di Indonesia",
+  "konten": "Teknologi pertanian modern membantu hasil panen lebih maksimal.",
+  "link": "https://www.kompas.com"
+},
+{
+  "id": 44,
+  "judul": "Kemajuan Teknologi Satelit Nasional",
+  "konten": "Indonesia mengembangkan teknologi komunikasi satelit modern.",
+  "link": "https://tekno.tempo.co"
+},
+{
+  "id": 45,
+  "judul": "Perkembangan Industri Musik Digital",
+  "konten": "Platform musik online mendukung perkembangan industri hiburan digital.",
+  "link": "https://www.tempo.co"
+},
+{
+  "id": 46,
+  "judul": "Peningkatan Kesadaran Keamanan Siber",
+  "konten": "Masyarakat mulai memahami pentingnya keamanan data digital.",
+  "link": "https://tekno.kompas.com"
+},
+{
+  "id": 47,
+  "judul": "Perkembangan Teknologi Smart Home",
+  "konten": "Perangkat rumah pintar menggunakan teknologi otomatisasi modern.",
+  "link": "https://inet.detik.com"
+},
+{
+  "id": 48,
+  "judul": "Industri Kreatif Indonesia Semakin Berkembang",
+  "konten": "Industri kreatif memanfaatkan teknologi digital untuk pemasaran produk.",
+  "link": "https://www.cnnindonesia.com"
+},
+{
+  "id": 49,
+  "judul": "Perkembangan Teknologi Augmented Reality",
+  "konten": "Teknologi augmented reality digunakan dalam pendidikan dan hiburan.",
+  "link": "https://tekno.kompas.com"
+},
+{
+  "id": 50,
+  "judul": "Penggunaan Big Data Dalam Dunia Bisnis",
+  "konten": "Big data membantu perusahaan menganalisis perilaku konsumen.",
+  "link": "https://www.techinasia.com"
+},
+{
+  "id": 51,
+  "judul": "Pemerintah Tingkatkan Infrastruktur Digital Nasional",
+  "konten": "Pembangunan jaringan internet mendukung transformasi digital Indonesia.",
+  "link": "https://www.kompas.com"
+},
+{
+  "id": 52,
+  "judul": "Nilai Tukar Rupiah Mengalami Penguatan",
+  "konten": "Stabilitas ekonomi nasional memengaruhi penguatan nilai tukar rupiah.",
+  "link": "https://finance.detik.com"
+},
+{
+  "id": 53,
+  "judul": "Perkembangan Teknologi Internet of Things",
+  "konten": "Internet of things diterapkan pada perangkat rumah tangga pintar.",
+  "link": "https://inet.detik.com"
+},
+{
+  "id": 54,
+  "judul": "Peningkatan Produksi Pertanian Nasional",
+  "konten": "Teknologi pertanian membantu meningkatkan produksi pangan nasional.",
+  "link": "https://www.cnnindonesia.com"
+},
+{
+  "id": 55,
+  "judul": "Kemajuan Sistem Pembayaran QRIS",
+  "konten": "QRIS mempermudah transaksi ekonomi digital masyarakat.",
+  "link": "https://www.cnbcindonesia.com"
+},
+{
+  "id": 56,
+  "judul": "Pendidikan Online Semakin Diminati",
+  "konten": "Platform pembelajaran digital digunakan pelajar dan mahasiswa.",
+  "link": "https://edukasi.kompas.com"
+},
+{
+  "id": 57,
+  "judul": "Teknologi Machine Learning Berkembang Pesat",
+  "konten": "Machine learning dimanfaatkan dalam analisis data bisnis dan teknologi.",
+  "link": "https://tekno.tempo.co"
+},
+{
+  "id": 58,
+  "judul": "Harga Emas Mengalami Kenaikan",
+  "konten": "Investor memilih emas sebagai aset aman dalam kondisi ekonomi.",
+  "link": "https://finance.detik.com"
+},
+{
+  "id": 59,
+  "judul": "Pemerintah Fokus Pada Ketahanan Pangan",
+  "konten": "Program ketahanan pangan nasional terus diperluas pemerintah.",
+  "link": "https://www.tempo.co"
+},
+{
+  "id": 60,
+  "judul": "Perkembangan Teknologi Virtual Reality",
+  "konten": "Virtual reality digunakan dalam hiburan pendidikan dan teknologi modern.",
+  "link": "https://tekno.kompas.com"
+}
+,
+{
+  "id": 61,
+  "judul": "Industri Pariwisata Nasional Mulai Bangkit",
+  "konten": "Jumlah wisatawan domestik meningkat selama musim liburan nasional.",
+  "link": "https://travel.kompas.com/"
+},
+{
+  "id": 62,
+  "judul": "Keamanan Siber Menjadi Tantangan Baru",
+  "konten": "Ancaman serangan digital meningkat pada sektor bisnis modern.",
+  "link": "https://tekno.tempo.co/"
+},
+{
+  "id": 63,
+  "judul": "Perkembangan Mobil Otonom di Dunia",
+  "konten": "Teknologi kendaraan tanpa pengemudi terus dikembangkan perusahaan otomotif.",
+  "link": "https://otomotif.kompas.com/"
+},
+{
+  "id": 64,
+  "judul": "Ekonomi Kreatif Indonesia Terus Tumbuh",
+  "konten": "Pelaku usaha kreatif memanfaatkan media digital untuk pemasaran.",
+  "link": "https://bisnis.tempo.co/"
+},
+{
+  "id": 65,
+  "judul": "Penggunaan Energi Surya Semakin Meluas",
+  "konten": "Masyarakat mulai menggunakan panel surya sebagai energi alternatif.",
+  "link": "https://www.cnnindonesia.com/"
+},
+{
+  "id": 66,
+  "judul": "Perkembangan Industri Otomotif Nasional",
+  "konten": "Produksi kendaraan nasional meningkat pada tahun ini Indonesia.",
+  "link": "https://otomotif.kompas.com/"
+},
+{
+  "id": 67,
+  "judul": "Teknologi Big Data Membantu Dunia Bisnis",
+  "konten": "Perusahaan memanfaatkan big data memahami perilaku konsumen digital.",
+  "link": "https://www.techinasia.com/"
+},
+{
+  "id": 68,
+  "judul": "Pemerintah Dorong Penggunaan Produk Lokal",
+  "konten": "Kampanye penggunaan produk lokal dilakukan di berbagai daerah.",
+  "link": "https://www.liputan6.com/"
+},
+{
+  "id": 69,
+  "judul": "Perkembangan Dunia Esports Indonesia",
+  "konten": "Turnamen esports nasional menarik perhatian generasi muda Indonesia.",
+  "link": "https://sport.detik.com/"
+},
+{
+  "id": 70,
+  "judul": "Harga Bahan Pokok Tetap Stabil",
+  "konten": "Pemerintah memastikan distribusi pangan berjalan lancar nasional.",
+  "link": "https://finance.detik.com/"
+},
+{
+  "id": 71,
+  "judul": "Kemajuan Teknologi Smartwatch",
+  "konten": "Smartwatch modern dilengkapi fitur kesehatan yang lebih canggih.",
+  "link": "https://tekno.kompas.com/"
+},
+{
+  "id": 72,
+  "judul": "Investasi Startup Indonesia Terus Naik",
+  "konten": "Investor asing tertarik mendanai startup teknologi lokal Indonesia.",
+  "link": "https://www.cnbcindonesia.com/"
+},
+{
+  "id": 73,
+  "judul": "Perkembangan Industri Fashion Lokal",
+  "konten": "Produk fashion lokal semakin diminati pasar internasional global.",
+  "link": "https://www.tempo.co/"
+},
+{
+  "id": 74,
+  "judul": "Teknologi Cloud Semakin Dibutuhkan",
+  "konten": "Perusahaan mulai menggunakan layanan cloud computing modern digital.",
+  "link": "https://www.techinasia.com/"
+},
+{
+  "id": 75,
+  "judul": "Peningkatan Penggunaan Kendaraan Ramah Lingkungan",
+  "konten": "Kendaraan hybrid dan listrik semakin populer di masyarakat.",
+  "link": "https://otomotif.kompas.com/"
+},
+{
+  "id": 76,
+  "judul": "Perkembangan Industri Perbankan Digital",
+  "konten": "Bank digital menawarkan layanan transaksi lebih cepat modern.",
+  "link": "https://finance.detik.com/"
+},
+{
+  "id": 77,
+  "judul": "Pemerintah Kembangkan Kota Pintar",
+  "konten": "Konsep smart city diterapkan untuk meningkatkan layanan publik.",
+  "link": "https://www.liputan6.com/"
+},
+{
+  "id": 78,
+  "judul": "Kemajuan Teknologi Drone di Indonesia",
+  "konten": "Drone dimanfaatkan untuk pemetaan dan pengawasan wilayah nasional.",
+  "link": "https://tekno.tempo.co/"
+},
+{
+  "id": 79,
+  "judul": "Peningkatan Ekspor Produk Teknologi",
+  "konten": "Produk elektronik Indonesia mulai memasuki pasar internasional global.",
+  "link": "https://bisnis.tempo.co/"
+},
+{
+  "id": 80,
+  "judul": "Perkembangan Teknologi Chatbot Modern",
+  "konten": "Chatbot membantu perusahaan meningkatkan layanan pelanggan digital.",
+  "link": "https://tekno.kompas.com/"
+},
+{
+  "id": 81,
+  "judul": "Kebijakan Baru Tentang Pajak Digital",
+  "konten": "Pemerintah membahas aturan pajak untuk perusahaan teknologi digital.",
+  "link": "https://www.cnnindonesia.com/"
+},
+{
+  "id": 82,
+  "judul": "Peningkatan Kualitas Pendidikan Nasional",
+  "konten": "Sekolah menerapkan kurikulum berbasis teknologi dan pembelajaran digital.",
+  "link": "https://edukasi.kompas.com/"
+},
+{
+  "id": 83,
+  "judul": "Perkembangan Industri Musik Digital Indonesia",
+  "konten": "Musisi lokal memanfaatkan platform streaming musik online digital.",
+  "link": "https://www.tempo.co/"
+},
+{
+  "id": 84,
+  "judul": "Harga Minyak Dunia Mengalami Perubahan",
+  "konten": "Perubahan harga minyak memengaruhi ekonomi global dan nasional.",
+  "link": "https://finance.detik.com/"
+},
+{
+  "id": 85,
+  "judul": "Kemajuan Teknologi Wearable Device",
+  "konten": "Perangkat wearable semakin canggih memantau kesehatan pengguna modern.",
+  "link": "https://tekno.kompas.com/"
+},
+{
+  "id": 86,
+  "judul": "Program Digitalisasi UMKM Nasional",
+  "konten": "UMKM didorong memanfaatkan platform online untuk meningkatkan penjualan.",
+  "link": "https://www.cnbcindonesia.com/"
+},
+{
+  "id": 87,
+  "judul": "Perkembangan Dunia Kerja Remote",
+  "konten": "Perusahaan mulai menerapkan sistem kerja jarak jauh digital.",
+  "link": "https://www.techinasia.com/"
+},
+{
+  "id": 88,
+  "judul": "Teknologi Otomasi Industri Semakin Berkembang",
+  "konten": "Pabrik modern menggunakan sistem otomatis untuk proses produksi.",
+  "link": "https://tekno.tempo.co/"
+},
+{
+  "id": 89,
+  "judul": "Perkembangan Ekonomi Syariah di Indonesia",
+  "konten": "Ekonomi syariah menjadi sektor yang berkembang pesat nasional.",
+  "link": "https://www.cnnindonesia.com/"
+},
+{
+  "id": 90,
+  "judul": "Kemajuan Teknologi Pencarian Berbasis AI",
+  "konten": "Mesin pencari modern memanfaatkan AI menghasilkan informasi relevan.",
+  "link": "https://tekno.kompas.com/"
+},
+{
+  "id": 91,
+  "judul": "Peningkatan Produksi Energi Nasional",
+  "konten": "Produksi energi ditingkatkan memenuhi kebutuhan masyarakat Indonesia modern.",
+  "link": "https://www.liputan6.com/"
+},
+{
+  "id": 92,
+  "judul": "Perkembangan Dunia Startup Pendidikan",
+  "konten": "Startup edutech membantu proses belajar online lebih efektif.",
+  "link": "https://edukasi.kompas.com/"
+},
+{
+  "id": 93,
+  "judul": "Teknologi Face Recognition Semakin Populer",
+  "konten": "Sistem pengenalan wajah digunakan untuk keamanan digital modern.",
+  "link": "https://tekno.tempo.co/"
+},
+{
+  "id": 94,
+  "judul": "Pemerintah Tingkatkan Sektor Industri Kreatif",
+  "konten": "Dukungan diberikan kepada pelaku usaha kreatif lokal Indonesia.",
+  "link": "https://bisnis.tempo.co/"
+},
+{
+  "id": 95,
+  "judul": "Perkembangan Teknologi Gaming Modern",
+  "konten": "Game modern hadir dengan kualitas grafis realistis dan canggih.",
+  "link": "https://inet.detik.com/"
+},
+{
+  "id": 96,
+  "judul": "Peningkatan Penggunaan Aplikasi Digital",
+  "konten": "Aplikasi digital membantu aktivitas sehari hari masyarakat Indonesia.",
+  "link": "https://www.techinasia.com/"
+},
+{
+  "id": 97,
+  "judul": "Teknologi Analitik Data Digunakan Perusahaan",
+  "konten": "Analitik data membantu perusahaan mengambil keputusan bisnis tepat.",
+  "link": "https://tekno.kompas.com/"
+},
+{
+  "id": 98,
+  "judul": "Pertumbuhan Industri Teknologi Nasional",
+  "konten": "Industri teknologi Indonesia berkembang cepat pada era digital.",
+  "link": "https://www.cnbcindonesia.com/"
+},
+{
+  "id": 99,
+  "judul": "Perkembangan Sistem Keamanan Digital",
+  "konten": "Perusahaan meningkatkan keamanan sistem melindungi data pengguna.",
+  "link": "https://tekno.tempo.co/"
+},
+{
+  "id": 100,
+  "judul": "Peningkatan Literasi Digital Masyarakat",
+  "konten": "Program literasi digital meningkatkan pemahaman teknologi masyarakat Indonesia.",
+  "link": "https://www.kompas.com/"
+}
+]
