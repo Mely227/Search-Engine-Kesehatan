@@ -231,9 +231,16 @@
 
         .card p {
             color: #64748b;
-            line-height: 1.9;
+            line-height: 1.6;        /* Sedikit dirapatkan agar proporsional saat dipotong */
             margin-bottom: 25px;
             font-size: 15px;
+            
+            /* Tambahkan 5 baris kode di bawah ini */
+            display: -webkit-box;
+            -webkit-line-clamp: 3;   /* Ubah angka 3 ini ke 1 atau 2 jika ingin lebih pendek */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         /* ACTIONS */

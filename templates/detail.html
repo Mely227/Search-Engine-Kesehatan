@@ -218,7 +218,20 @@
         }
 
         h2 { color: #0f766f; margin-bottom: 15px; font-size: 23px; display: flex; align-items: center; gap: 12px; }
-        p { color: #64748b; line-height: 1.8; font-size: 14.5px; }
+        
+        /* ==================== DIUBAH DI SINI ==================== */
+        /* Membatasi teks isi artikel utama menjadi maksimal 3 baris */
+        .article-body-text {
+            color: #64748b;
+            line-height: 1.6;
+            font-size: 14.5px;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;   /* Atur ke angka 1, 2, atau 3 baris */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        /* ======================================================== */
 
         .berita-title {
             font-size: 26px;
@@ -393,7 +406,7 @@
             <h2><i class="fas fa-newspaper"></i> Konten Artikel</h2>
             <p class="berita-title">{{ berita.judul }}</p>
             <br>
-            <p>{{ berita.konten }}</p>
+            <p class="article-body-text">{{ berita.konten }}</p>
         </div>
 
         <div class="section">

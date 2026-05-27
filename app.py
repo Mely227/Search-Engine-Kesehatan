@@ -71,7 +71,7 @@ def get_bm25_score(query, k1=1.5, b=0.75):
 def index():
     return render_template('index.html')
 
-# SEARCH
+# SEARCH (PEMBATASAN 10 DATA RELEVAN)
 @app.route('/search', methods=['GET', 'POST'])
 def search():
     query = request.form.get('query', '').strip() if request.method == 'POST' else request.args.get('query', '').strip()
@@ -92,8 +92,15 @@ def search():
                 'skor': round(score, 2)
             })
 
+    # Mengurutkan hasil pencarian dari skor tertinggi ke terendah
     results = sorted(results, key=lambda x: x['skor'], reverse=True)
-    return render_template('results.html', results=results, query=query)
+    
+    # ==================== DIUBAH DI SINI ====================
+    # Mengambil hanya 10 data pertama yang paling relevan (Top 10)
+    top_10_results = results[:10]
+    # ========================================================
+
+    return render_template('results.html', results=top_10_results, query=query)
 
 # DETAIL BM25 & COSINE SIMILARITY
 @app.route('/detail/<int:id>')
