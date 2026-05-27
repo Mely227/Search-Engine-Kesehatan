@@ -35,7 +35,7 @@ def preprocessing(text):
     tokens = re.findall(r'\b\w+\b', text)
     return [stemmer.stem(t) for t in tokens]
 
-# PREPARE BM25 VARIABLES
+# PREPARE GLOBAL VARIABLES
 N = len(data_berita)
 doc_lengths = [len(doc) for doc in processed_docs]
 avgdl = sum(doc_lengths) / N if N > 0 else 0
@@ -45,6 +45,61 @@ inverted_index = {}
 for idx, tokens in enumerate(processed_docs):
     for token in set(tokens):
         inverted_index.setdefault(token, []).append(idx)
+
+# ==================== ADDITIONAL FUNCTION: COSINE SCORE ====================
+def get_cosine_score(query):
+    if not query or N == 0:
+        return [0] * max(1, N)
+        
+    query_tokens = preprocessing(query)
+    if not query_tokens:
+        return [0] * N
+        
+    scores = [0] * N
+    counts_query = Counter(query_tokens)
+    
+    # Hitung bobot untuk query vector (TF-IDF)
+    vec_query = {}
+    magnitude_q_sq = 0
+    for word, tf_q in counts_query.items():
+        if word in inverted_index:
+            df_w = len(inverted_index[word])
+            word_idf = math.log(N / df_w) if df_w > 0 else 0.0
+            weight_q = tf_q * word_idf
+            vec_query[word] = weight_q
+            magnitude_q_sq += weight_q ** 2
+            
+    if magnitude_q_sq == 0:
+        return scores
+        
+    magnitude_q = math.sqrt(magnitude_q_sq)
+    
+    # Hitung skor untuk setiap dokumen
+    for idx, doc_tokens in enumerate(processed_docs):
+        if not doc_tokens:
+            continue
+            
+        counts_doc = Counter(doc_tokens)
+        dot_product = 0
+        magnitude_d_sq = 0
+        
+        # Hitung magnitude dokumen untuk semua kata unik di dokumen tersebut
+        for word, tf_d in counts_doc.items():
+            if word in inverted_index:
+                df_w = len(inverted_index[word])
+                word_idf = math.log(N / df_w) if df_w > 0 else 0.0
+                weight_d = tf_d * word_idf
+                magnitude_d_sq += weight_d ** 2
+                
+                # Jika kata juga ada di query, tambahkan ke dot product
+                if word in vec_query:
+                    dot_product += vec_query[word] * weight_d
+                    
+        if magnitude_d_sq > 0:
+            magnitude_d = math.sqrt(magnitude_d_sq)
+            scores[idx] = dot_product / (magnitude_q * magnitude_d)
+            
+    return scores
 
 # BM25 FUNCTION
 def get_bm25_score(query, k1=1.5, b=0.75):
@@ -71,17 +126,28 @@ def get_bm25_score(query, k1=1.5, b=0.75):
 def index():
     return render_template('index.html')
 
-# SEARCH (PEMBATASAN 10 DATA RELEVAN)
+# SEARCH (DIPERBARUI: MENDUKUNG BM25 DAN COSINE)
 @app.route('/search', methods=['GET', 'POST'])
 def search():
-    query = request.form.get('query', '').strip() if request.method == 'POST' else request.args.get('query', '').strip()
+    if request.method == 'POST':
+        query = request.form.get('query', '').strip()
+        method = request.form.get('method', 'bm25').lower()
+    else:
+        query = request.args.get('query', '').strip()
+        method = request.args.get('method', 'bm25').lower()
 
     if N == 0:
-        return render_template('results.html', results=[], query=query)
+        return render_template('results.html', results=[], query=query, total=0, method=method)
 
-    scores = get_bm25_score(query)
+    # Pemilihan Algoritma berdasarkan parameter 'method'
+    if method == 'cosine':
+        scores = get_cosine_score(query)
+        method_label = "Cosine"
+    else:
+        scores = get_bm25_score(query)
+        method_label = "BM25"
+
     results = []
-
     for i, score in enumerate(scores):
         if score > 0 and i < len(data_berita):
             results.append({
@@ -92,15 +158,13 @@ def search():
                 'skor': round(score, 2)
             })
 
-    # Mengurutkan hasil pencarian dari skor tertinggi ke terendah
+    # Urutkan dari skor tertinggi
     results = sorted(results, key=lambda x: x['skor'], reverse=True)
     
-    # ==================== DIUBAH DI SINI ====================
-    # Mengambil hanya 10 data pertama yang paling relevan (Top 10)
+    total_relevan_db = len(results)
     top_10_results = results[:10]
-    # ========================================================
 
-    return render_template('results.html', results=top_10_results, query=query)
+    return render_template('results.html', results=top_10_results, query=query, total=total_relevan_db, method=method_label)
 
 # DETAIL BM25 & COSINE SIMILARITY
 @app.route('/detail/<int:id>')
@@ -118,10 +182,7 @@ def detail(id):
 
     query = request.args.get('query', '').strip()
     
-    # Inisialisasi Variabel BM25
     tf_t, df_t, idf_bm25, skor_bm25 = 0, 0, 0.0, 0.0
-    
-    # Inisialisasi Variabel Cosine Similarity
     tf_q_cosine, tf_d_cosine, idf_cosine = 0, 0, 0.0
     dot_product, normalisasi, skor_cosine = 0.0, 0.0, 0.0
 
@@ -129,10 +190,10 @@ def detail(id):
         query_tokens = preprocessing(query)
         doc_tokens = processed_docs[berita_idx]
         
-        # 1. PERHITUNGAN METRIK BM25 (Eksisting)
+        # 1. PERHITUNGAN METRIK BM25
         k1, b = 1.5, 0.75
         if query_tokens:
-            token = query_tokens[0] # Mengambil kata pertama query untuk visualisasi tabel
+            token = query_tokens[0]
             if token in inverted_index:
                 df_t = len(inverted_index[token])
                 idf_bm25 = math.log((N - df_t + 0.5) / (df_t + 0.5) + 1)
@@ -143,37 +204,29 @@ def detail(id):
                     den = tf_t + k1 * (1 - b + b * (doc_lengths[berita_idx] / avgdl))
                     skor_bm25 = idf_bm25 * (num / den)
 
-        # 2. PERHITUNGAN METRIK COSINE SIMILARITY (Tambahan Baru)
+        # 2. PERHITUNGAN METRIK COSINE SIMILARITY
         if query_tokens and len(doc_tokens) > 0:
-            # Hitung frekuensi kata unik gabungan untuk pembentukan ruang vektor
             unique_words = set(query_tokens + doc_tokens)
-            
             counts_query = Counter(query_tokens)
             counts_doc = Counter(doc_tokens)
             
-            # Ambil perwakilan 1 kata kunci teratas untuk visualisasi ringkas komponen di tabel HTML
             target_token = query_tokens[0]
             tf_q_cosine = counts_query[target_token]
             tf_d_cosine = counts_doc[target_token]
             
-            # Hitung IDF Standar untuk Cosine Model Vektor: log(N / df)
             if target_token in inverted_index:
                 df_c = len(inverted_index[target_token])
                 idf_cosine = math.log(N / df_c) if df_c > 0 else 0.0
             
-            # Proses hitung vektor TF-IDF menyeluruh untuk Cosine Similarity
             vec_query = []
             vec_doc = []
             
             for word in unique_words:
-                # Menggunakan indeks frekuensi dokumen untuk menghitung bobot IDF kata terkait
                 df_w = len(inverted_index[word]) if word in inverted_index else 0
                 word_idf = math.log(N / df_w) if df_w > 0 else 0.0
-                
                 vec_query.append(counts_query[word] * word_idf)
                 vec_doc.append(counts_doc[word] * word_idf)
             
-            # Rumus matematika dot product & magnitude ruang vektor
             dot_product = sum(q * d for q, d in zip(vec_query, vec_doc))
             magnitude_q = math.sqrt(sum(q**2 for q in vec_query))
             magnitude_d = math.sqrt(sum(d**2 for d in vec_doc))
@@ -186,16 +239,12 @@ def detail(id):
         'detail.html',
         berita=berita,
         query=query,
-        
-        # Variabel Parameter BM25
         tf=tf_t,
         df=df_t,
         idf=round(idf_bm25, 2),
         skor=round(skor_bm25, 2),
         dl=doc_lengths[berita_idx] if berita_idx < len(doc_lengths) else 0,
         avdl=round(avgdl, 2),
-        
-        # Variabel Parameter Cosine Similarity Baru
         tf_q_cosine=tf_q_cosine,
         tf_d_cosine=tf_d_cosine,
         idf_cosine=round(idf_cosine, 2),

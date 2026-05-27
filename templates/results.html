@@ -231,13 +231,11 @@
 
         .card p {
             color: #64748b;
-            line-height: 1.6;        /* Sedikit dirapatkan agar proporsional saat dipotong */
+            line-height: 1.6;
             margin-bottom: 25px;
             font-size: 15px;
-            
-            /* Tambahkan 5 baris kode di bawah ini */
             display: -webkit-box;
-            -webkit-line-clamp: 3;   /* Ubah angka 3 ini ke 1 atau 2 jika ingin lebih pendek */
+            -webkit-line-clamp: 3;
             -webkit-box-orient: vertical;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -349,18 +347,15 @@
 </head>
 <body>
 
-    <!-- Elemen Dekoratif -->
     <div class="bg-shape shape-1"></div>
     <div class="bg-shape shape-2"></div>
 
-    <!-- Ikon Melayang -->
     <div class="floating-icon icon-1"><i class="fas fa-user-md"></i></div>
     <div class="floating-icon icon-2"><i class="fas fa-heartbeat"></i></div>
     <div class="floating-icon icon-3"><i class="fas fa-pills"></i></div>
-    <div class="floating-icon icon-4"><i class="fas fa-Notes-medical"></i></div>
+    <div class="floating-icon icon-4"><i class="fas fa-notes-medical"></i></div>
     <div class="floating-icon icon-5"><i class="fas fa-syringe"></i></div>
 
-    <!-- Navbar -->
     <div class="navbar">
         <div class="logo">
             <i class="fas fa-heartbeat"></i>
@@ -380,8 +375,8 @@
             </h1>
             <p>
                 <i class="fas fa-check-circle" style="color: #14b8a6;"></i>
-                Ditemukan <strong>{{ results|length }}</strong> berita kesehatan relevan
-            </p>
+                Ditemukan <strong>{{ total }}</strong> berita kesehatan relevan
+                </p>
         </div>
 
         {% if results %}
